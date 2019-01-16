@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_bg_cart_item"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <CheckBox
+        android:id="@+id/cart_goods_check_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/cart_goods_item_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@+id/cart_goods_check_single"
+        android:adjustViewBounds="true"
+        android:minHeight="50dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/cart_goods_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/cart_goods_item_img"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/cart_goods_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_goods_item_title"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/cart_goods_item_img"
+        android:padding="5dp"
+        android:text="￥价格"
+        android:textColor="#ff0606" />
+
+    <com.qh.xuezhimin.wynshop.view.AddSubLayout
+        android:id="@+id/add_sub_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_goods_item_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/cart_goods_item_price"
+        android:gravity="right"></com.qh.xuezhimin.wynshop.view.AddSubLayout>
+
+
+</RelativeLayout>
